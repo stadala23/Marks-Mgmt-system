@@ -86,6 +86,17 @@ class StudentManager {
     }
 
     // Update student details
+
+    public void deleteStudent(String id) {
+        StudentRecord student = findStudent(id);
+        if (student != null) {
+            students.remove(student);
+            System.out.println("Student deleted successfully.");
+        } else {
+            System.out.println("Student not found.");
+        }
+    }
+    
     public void updateStudent(String id, String newName) {
         for (StudentRecord s : students) {
             if (s.getId().equals(id)) {
@@ -96,15 +107,7 @@ class StudentManager {
         System.out.println("Student not found.");
     }
 
- public void deleteStudent(String id) {
-        StudentRecord student = findStudent(id);
-        if (student != null) {
-            students.remove(student);
-            System.out.println("Student deleted successfully.");
-        } else {
-            System.out.println("Student not found.");
-        }
-    }
+ 
 
     private StudentRecord findStudent(String id) {
         for (StudentRecord s : students) {
@@ -115,18 +118,7 @@ class StudentManager {
         return null;
     }
 
-    // Method to find a student by ID
-    public StudentRecord findStudent(String id) {
-        for (StudentRecord s : students) {
-            if (s.getId().equals(id)) {
-                return s;
-            }
-        }
-        return null;
-    }
-}
-
-public void bestInProgrammingFundamentals() {
+    public void bestInProgrammingFundamentals() {
     Student bestStudent = null;
     double highestMarks = 0.0;
 
@@ -143,6 +135,19 @@ public void bestInProgrammingFundamentals() {
         System.out.println("No students found.");
     }
 }
+
+    // Method to find a student by ID
+    public StudentRecord findStudent(String id) {
+        for (StudentRecord s : students) {
+            if (s.getId().equals(id)) {
+                return s;
+            }
+        }
+        return null;
+    }
+}
+
+
 
 // Method to find the best student in Database Management System
 public void bestInDatabaseManagementSystem() {
