@@ -11,6 +11,11 @@ public class StudentManager {
 	}
 
 	public void addStudent(Student student) {
+		
+		
+		try {
+			
+		
 		for (Student s : students) {
 			if (s.getId().equals(student.getId())) {
 				System.out.println("Student already exists.");
@@ -18,6 +23,15 @@ public class StudentManager {
 			}
 		}
 		students.add(student);
+		}
+		catch(Exception e) {
+			System.out.println("There seems to be Some Exception Occurred in the code to Add Student"
+					+ " The Exception Message and Stack Trace is as Follows. Pls Check");
+			System.out.println(e.getMessage());
+			e.printStackTrace();
+		}
+		
+		
 	}
 
 	public Student findStudent(String id) {
