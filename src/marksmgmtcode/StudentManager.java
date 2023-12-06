@@ -73,12 +73,21 @@ public class StudentManager {
 	}
 
 	public void deleteStudent(String id) {
+		try {
 		Student student = findStudent(id);
 		if (student != null) {
 			students.remove(student);
 			System.out.println("Student deleted successfully.");
 		} else {
 			System.out.println("Student not found.");
+		}
+		}
+		catch(Exception e) {
+			System.out.println("There seems to be Some Exception Occurred in the code to delete Student"
+					+ " The Exception Message and Stack Trace is as Follows. Pls Check");
+			System.out.println(e.getMessage());
+			e.printStackTrace();
+			
 		}
 	}
 
