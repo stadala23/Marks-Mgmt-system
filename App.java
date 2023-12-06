@@ -321,7 +321,7 @@ class Menu {
     }
 }
 
-public class App1 {
+public class App {
     public static void main(String[] args) {
         Menu menu = new Menu();
         menu.displayMenu();
