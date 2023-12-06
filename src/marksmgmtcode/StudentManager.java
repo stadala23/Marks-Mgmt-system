@@ -35,12 +35,23 @@ public class StudentManager {
 	}
 
 	public Student findStudent(String id) {
+		try {
+			
 		for (Student student : students) {
 			if (student.getId().equals(id)) {
 				return student;
 			}
 		}
 		return null;
+		}
+		catch(Exception e) {
+			System.out.println("There seems to be Some Exception Occurred in the code to Find Student"
+					+ " The Exception Message and Stack Trace is as Follows. Pls Check");
+			System.out.println(e.getMessage());
+			e.printStackTrace();
+			
+			return null;
+		}
 	}
 
 	public void updateStudent(String id, String newName) {
