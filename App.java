@@ -258,7 +258,7 @@ class Menu {
     }
 }
 
-public class App {
+public class App1 {
     public static void main(String[] args) {
         Menu menu = new Menu();
         menu.displayMenu();
