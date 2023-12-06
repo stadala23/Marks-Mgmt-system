@@ -55,11 +55,20 @@ public class StudentManager {
 	}
 
 	public void updateStudent(String id, String newName) {
+		try {
 		Student student = findStudent(id);
 		if (student != null) {
 			student.setName(newName);
 		} else {
 			System.out.println("Student not found.");
+		}
+		}
+		catch(Exception e) {
+			System.out.println("There seems to be Some Exception Occurred in the code to update Student"
+					+ " The Exception Message and Stack Trace is as Follows. Pls Check");
+			System.out.println(e.getMessage());
+			e.printStackTrace();
+			
 		}
 	}
 
