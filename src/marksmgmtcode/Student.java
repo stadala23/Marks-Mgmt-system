@@ -4,29 +4,29 @@ public class Student {
     protected String studentId;
     protected String studentName;
     private double progFundamentals_Marks;
-    private double databaseManagementSystemMarks;
+    private double dbms_Marks;
 
-    public Student(String id, String name) {
-        this.studentId = id;
-        this.studentName = name;
+    public Student(String studentId, String studentName) {
+        this.studentId = studentId;
+        this.studentName = studentName;
         this.progFundamentals_Marks = 0.0;
-        this.databaseManagementSystemMarks = 0.0;
+        this.dbms_Marks = 0.0;
     }
 
     public String getStudentId() {
         return studentId;
     }
 
-    public void setStudentId(String id) {
-        this.studentId = id;
+    public void setStudentId(String studentId) {
+        this.studentId = studentId;
     }
 
     public String getStudentName() {
         return studentName;
     }
 
-    public void setStudentName(String name) {
-        this.studentName = name;
+    public void setStudentName(String studentName) {
+        this.studentName = studentName;
     }
 
     public double getProgFundamentals_Marks() {
@@ -37,17 +37,17 @@ public class Student {
         this.progFundamentals_Marks = progFundamentals_Marks;
     }
 
-    public double getDatabaseManagementSystemMarks() {
-        return databaseManagementSystemMarks;
+    public double getDbms_Marks() {
+        return dbms_Marks;
     }
 
-    public void setDatabaseManagementSystemMarks(double databaseManagementSystemMarks) {
-        this.databaseManagementSystemMarks = databaseManagementSystemMarks;
+    public void setDbms_Marks(double dbms_Marks) {
+        this.dbms_Marks = dbms_Marks;
     }
 
     @Override
     public String toString() {
         return "ID: " + studentId + ", Name: " + studentName + ", PF Marks: " + progFundamentals_Marks + ", DBMS Marks: "
-                + databaseManagementSystemMarks;
+                + dbms_Marks;
     }
 }
