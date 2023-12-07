@@ -153,10 +153,19 @@ public class Menu {
     }
 
     private void deleteStudent() {
+    	try {
         System.out.print("Enter Student ID: ");
         String id = scanner.nextLine();
         studentManager.deleteStudent(id);
         System.out.println("Student deleted successfully.");
+    	}
+    	catch(Exception e) {
+    		System.out.println("There seems to be Some Exception Occurred in the code to deleteStudent in Menu"
+    				+ " The Exception Message and Stack Trace is as Follows. Pls Check");
+    		System.out.println(e.getMessage());
+    		e.printStackTrace();
+    		
+    	}
     }
 
     private void displayStudents() {
