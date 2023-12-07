@@ -92,12 +92,20 @@ public class StudentManager {
 	}
 
 	public void updateStudentMarks(String id, double pfMarks, double dbmsMarks) {
+		try {
 		Student student = findStudent(id);
 		if (student != null) {
 			student.setProgrammingFundamentalsMarks(pfMarks);
 			student.setDatabaseManagementSystemMarks(dbmsMarks);
 		} else {
 			System.out.println("Student not found.");
+		}
+		}
+		catch(Exception e) {
+			System.out.println("There seems to be Some Exception Occurred in the code to Update Student Marks"
+					+ " The Exception Message and Stack Trace is as Follows. Pls Check");
+			System.out.println(e.getMessage());
+			e.printStackTrace();
 		}
 	}
 
