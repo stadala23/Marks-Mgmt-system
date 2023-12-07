@@ -138,12 +138,20 @@ public class StudentManager {
 	public Student getBestStudentInDatabaseManagementSystem() {
 		Student bestStudent = null;
 		double highestMarks = 0.0;
-
+		try {
 		for (Student student : students) {
 			if (student.getDatabaseManagementSystemMarks() > highestMarks) {
 				highestMarks = student.getDatabaseManagementSystemMarks();
 				bestStudent = student;
 			}
+		}
+		}
+		catch(Exception e) {
+			System.out.println("There seems to be Some Exception Occurred in the code to get the Best Student In Database Management System"
+					+ " The Exception Message and Stack Trace is as Follows. Pls Check");
+			System.out.println(e.getMessage());
+			e.printStackTrace();
+			
 		}
 		return bestStudent;
 	}
