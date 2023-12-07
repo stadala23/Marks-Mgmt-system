@@ -26,10 +26,10 @@ public class Menu {
             System.out.println("9. Display Best Student in Database Management System");
             System.out.print("Enter your choice: ");
 
-            int choice = scanner.nextInt();
-            scanner.nextLine(); // Consume newline
+            int selectedChoice = scanner.nextInt();
+            scanner.nextLine(); 
 
-            switch (choice) {
+            switch (selectedChoice) {
                 case 1:
                     addUndergraduateStudent();
                     break;
