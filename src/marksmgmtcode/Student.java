@@ -3,13 +3,13 @@ package marksmgmtcode;
 public class Student {
     protected String studentId;
     protected String studentName;
-    private double programmingFundamentalsMarks;
+    private double progFundamentals_Marks;
     private double databaseManagementSystemMarks;
 
     public Student(String id, String name) {
         this.studentId = id;
         this.studentName = name;
-        this.programmingFundamentalsMarks = 0.0;
+        this.progFundamentals_Marks = 0.0;
         this.databaseManagementSystemMarks = 0.0;
     }
 
@@ -29,12 +29,12 @@ public class Student {
         this.studentName = name;
     }
 
-    public double getProgrammingFundamentalsMarks() {
-        return programmingFundamentalsMarks;
+    public double getProgFundamentals_Marks() {
+        return progFundamentals_Marks;
     }
 
-    public void setProgrammingFundamentalsMarks(double programmingFundamentalsMarks) {
-        this.programmingFundamentalsMarks = programmingFundamentalsMarks;
+    public void setProgFundamentals_Marks(double progFundamentals_Marks) {
+        this.progFundamentals_Marks = progFundamentals_Marks;
     }
 
     public double getDatabaseManagementSystemMarks() {
@@ -47,7 +47,7 @@ public class Student {
 
     @Override
     public String toString() {
-        return "ID: " + studentId + ", Name: " + studentName + ", PF Marks: " + programmingFundamentalsMarks + ", DBMS Marks: "
+        return "ID: " + studentId + ", Name: " + studentName + ", PF Marks: " + progFundamentals_Marks + ", DBMS Marks: "
                 + databaseManagementSystemMarks;
     }
 }
