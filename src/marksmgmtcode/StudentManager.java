@@ -16,8 +16,8 @@ public class StudentManager {
 		try {
 			
 		
-		for (Student s : students) {
-			if (s.getId().equals(student.getId())) {
+		for (Student studentObject : students) {
+			if (studentObject.getStudentId().equals(student.getStudentId())) {
 				System.out.println("Student already exists.");
 				return;
 			}
@@ -34,11 +34,11 @@ public class StudentManager {
 		
 	}
 
-	public Student findStudent(String id) {
+	public Student findStudent(String studentId) {
 		try {
 			
 		for (Student student : students) {
-			if (student.getId().equals(id)) {
+			if (student.getStudentId().equals(studentId)) {
 				return student;
 			}
 		}
@@ -54,11 +54,11 @@ public class StudentManager {
 		}
 	}
 
-	public void updateStudent(String id, String newName) {
+	public void updateStudent(String studentId, String newStudentName) {
 		try {
-		Student student = findStudent(id);
+		Student student = findStudent(studentId);
 		if (student != null) {
-			student.setName(newName);
+			student.setStudentName(newStudentName);
 		} else {
 			System.out.println("Student not found.");
 		}
@@ -72,9 +72,9 @@ public class StudentManager {
 		}
 	}
 
-	public void deleteStudent(String id) {
+	public void deleteStudent(String studentId) {
 		try {
-		Student student = findStudent(id);
+		Student student = findStudent(studentId);
 		if (student != null) {
 			students.remove(student);
 			System.out.println("Student deleted successfully.");
@@ -91,12 +91,12 @@ public class StudentManager {
 		}
 	}
 
-	public void updateStudentMarks(String id, double pfMarks, double dbmsMarks) {
+	public void updateStudentMarks(String studentId, double pfMarks, double dbmsMarks) {
 		try {
-		Student student = findStudent(id);
+		Student student = findStudent(studentId);
 		if (student != null) {
-			student.setProgrammingFundamentalsMarks(pfMarks);
-			student.setDatabaseManagementSystemMarks(dbmsMarks);
+			student.setProgFundamentals_Marks(pfMarks);
+			student.setDbms_Marks(dbmsMarks);
 		} else {
 			System.out.println("Student not found.");
 		}
@@ -114,14 +114,14 @@ public class StudentManager {
 	}
 
 	public Student getBestStudentInProgrammingFundamentals() {
-		Student bestStudent = null;
+		Student topper = null;
 		double highestMarks = 0.0;
 
 		try {
 		for (Student student : students) {
-			if (student.getProgrammingFundamentalsMarks() > highestMarks) {
-				highestMarks = student.getProgrammingFundamentalsMarks();
-				bestStudent = student;
+			if (student.getProgFundamentals_Marks() > highestMarks) {
+				highestMarks = student.getProgFundamentals_Marks();
+				topper = student;
 			}
 		}
 		}
@@ -132,17 +132,17 @@ public class StudentManager {
 			e.printStackTrace();
 			
 		}
-		return bestStudent;
+		return topper;
 	}
 
 	public Student getBestStudentInDatabaseManagementSystem() {
-		Student bestStudent = null;
+		Student topper = null;
 		double highestMarks = 0.0;
 		try {
 		for (Student student : students) {
-			if (student.getDatabaseManagementSystemMarks() > highestMarks) {
-				highestMarks = student.getDatabaseManagementSystemMarks();
-				bestStudent = student;
+			if (student.getDbms_Marks() > highestMarks) {
+				highestMarks = student.getDbms_Marks();
+				topper = student;
 			}
 		}
 		}
@@ -153,6 +153,6 @@ public class StudentManager {
 			e.printStackTrace();
 			
 		}
-		return bestStudent;
+		return topper;
 	}
 }
