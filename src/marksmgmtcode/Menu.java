@@ -169,10 +169,20 @@ public class Menu {
     }
 
     private void displayStudents() {
+    	try {
+    		
+    	
         List<Student> students = studentManager.getStudents();
         for (Student student : students) {
             System.out.println(student);
         }
+    	}
+    	catch(Exception e) {
+    		System.out.println("There seems to be Some Exception Occurred in the code to displayStudents in Menu"
+    				+ " The Exception Message and Stack Trace is as Follows. Pls Check");
+    		System.out.println(e.getMessage());
+    		e.printStackTrace();
+    	}
     }
 
     private void displayBestStudentInProgrammingFundamentals() {
