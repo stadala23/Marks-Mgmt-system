@@ -71,6 +71,7 @@ public class Menu {
     }
 
     private void addUndergraduateStudent() {
+    	try {
         System.out.print("Enter Student ID: ");
         String id = scanner.nextLine();
         System.out.print("Enter Student Name: ");
@@ -80,6 +81,14 @@ public class Menu {
         UndergraduateStudent student = new UndergraduateStudent(id, name, major);
         studentManager.addStudent(student);
         System.out.println("Undergraduate Student added successfully.");
+    	}
+    	catch(Exception e) {
+    		System.out.println("There seems to be Some Exception Occurred in the code to addUndergraduateStudent in Menu"
+    				+ " The Exception Message and Stack Trace is as Follows. Pls Check");
+    		System.out.println(e.getMessage());
+    		e.printStackTrace();
+    		
+    	}
     }
 
     private void addGraduateStudent() {
