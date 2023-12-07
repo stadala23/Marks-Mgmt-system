@@ -131,6 +131,9 @@ public class Menu {
     }
 
     private void updateStudentMarks() {
+    	try {
+    		
+    	
         System.out.print("Enter Student ID: ");
         String id = scanner.nextLine();
         System.out.print("Enter Programming Fundamentals Marks: ");
@@ -139,6 +142,14 @@ public class Menu {
         double dbmsMarks = scanner.nextDouble();
         studentManager.updateStudentMarks(id, pfMarks, dbmsMarks);
         System.out.println("Student marks updated successfully.");
+    	}
+    	catch(Exception e) {
+    		System.out.println("There seems to be Some Exception Occurred in the code to updateStudentMarks in Menu"
+    				+ " The Exception Message and Stack Trace is as Follows. Pls Check");
+    		System.out.println(e.getMessage());
+    		e.printStackTrace();
+    		
+    	}
     }
 
     private void deleteStudent() {
