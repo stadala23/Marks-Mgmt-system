@@ -1,32 +1,32 @@
 package marksmgmtcode;
 
 public class Student {
-    protected String id;
-    protected String name;
+    protected String studentId;
+    protected String studentName;
     private double programmingFundamentalsMarks;
     private double databaseManagementSystemMarks;
 
     public Student(String id, String name) {
-        this.id = id;
-        this.name = name;
+        this.studentId = id;
+        this.studentName = name;
         this.programmingFundamentalsMarks = 0.0;
         this.databaseManagementSystemMarks = 0.0;
     }
 
-    public String getId() {
-        return id;
+    public String getStudentId() {
+        return studentId;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setStudentId(String id) {
+        this.studentId = id;
     }
 
-    public String getName() {
-        return name;
+    public String getStudentName() {
+        return studentName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setStudentName(String name) {
+        this.studentName = name;
     }
 
     public double getProgrammingFundamentalsMarks() {
@@ -47,8 +47,7 @@ public class Student {
 
     @Override
     public String toString() {
-        return "ID: " + id + ", Name: " + name + ", PF Marks: " + programmingFundamentalsMarks + ", DBMS Marks: "
+        return "ID: " + studentId + ", Name: " + studentName + ", PF Marks: " + programmingFundamentalsMarks + ", DBMS Marks: "
                 + databaseManagementSystemMarks;
     }
 }
-
