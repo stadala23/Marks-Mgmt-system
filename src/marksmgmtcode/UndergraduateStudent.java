@@ -20,7 +20,13 @@ public class UndergraduateStudent extends Student {
 		this.fieldOfStudy = fieldOfStudy;
 	}
 
-	// Getter and setter for fieldOfStudy with appropriate comments...
+	public String getFieldOfStudy() {
+		return fieldOfStudy;
+	}
+
+	public void setFieldOfStudy(String fieldOfStudy) {
+		this.fieldOfStudy = fieldOfStudy;
+	}
 
 	/**
 	 * Overridden toString method to include field of study in the student's
