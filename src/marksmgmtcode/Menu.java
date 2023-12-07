@@ -92,6 +92,7 @@ public class Menu {
     }
 
     private void addGraduateStudent() {
+    	try {
         System.out.print("Enter Student ID: ");
         String id = scanner.nextLine();
         System.out.print("Enter Student Name: ");
@@ -101,6 +102,14 @@ public class Menu {
         GraduateStudent student = new GraduateStudent(id, name, researchArea);
         studentManager.addStudent(student);
         System.out.println("Graduate Student added successfully.");
+    	}
+    	catch(Exception e) {
+    		System.out.println("There seems to be Some Exception Occurred in the code to addGraduateStudent in Menu"
+    				+ " The Exception Message and Stack Trace is as Follows. Pls Check");
+    		System.out.println(e.getMessage());
+    		e.printStackTrace();
+    		
+    	}
     }
 
     private void updateStudentName() {
