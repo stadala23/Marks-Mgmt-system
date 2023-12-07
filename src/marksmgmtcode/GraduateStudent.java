@@ -1,23 +1,23 @@
 package marksmgmtcode;
 
 public class GraduateStudent extends Student {
-	private String researchArea;
+	private String areaOfStudy;
 
-	public GraduateStudent(String id, String name, String researchArea) {
-		super(id, name);
-		this.researchArea = researchArea;
+	public GraduateStudent(String studentId, String studentName, String researchArea) {
+		super(studentId, studentName);
+		this.areaOfStudy = researchArea;
 	}
 
-	public String getResearchArea() {
-		return researchArea;
+	public String getAreaOfStudy() {
+		return areaOfStudy;
 	}
 
-	public void setResearchArea(String researchArea) {
-		this.researchArea = researchArea;
+	public void setAreaOfStudy(String researchArea) {
+		this.areaOfStudy = researchArea;
 	}
 
 	@Override
 	public String toString() {
-		return super.toString() + ", Research Area: " + researchArea;
+		return super.toString() + ",  Area Of Study: " + areaOfStudy;
 	}
 }
