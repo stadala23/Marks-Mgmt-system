@@ -117,11 +117,20 @@ public class StudentManager {
 		Student bestStudent = null;
 		double highestMarks = 0.0;
 
+		try {
 		for (Student student : students) {
 			if (student.getProgrammingFundamentalsMarks() > highestMarks) {
 				highestMarks = student.getProgrammingFundamentalsMarks();
 				bestStudent = student;
 			}
+		}
+		}
+		catch(Exception e) {
+			System.out.println("There seems to be Some Exception Occurred in the code to get the Best Student In ProgrammingFundamentals"
+					+ " The Exception Message and Stack Trace is as Follows. Pls Check");
+			System.out.println(e.getMessage());
+			e.printStackTrace();
+			
 		}
 		return bestStudent;
 	}
