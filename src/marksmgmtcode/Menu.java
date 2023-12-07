@@ -113,12 +113,21 @@ public class Menu {
     }
 
     private void updateStudentName() {
+    	try {
         System.out.print("Enter Student ID: ");
         String id = scanner.nextLine();
         System.out.print("Enter New Name: ");
         String newName = scanner.nextLine();
         studentManager.updateStudent(id, newName);
         System.out.println("Student name updated successfully.");
+    	}
+    	catch(Exception e) {
+    		System.out.println("There seems to be Some Exception Occurred in the code to updateStudentName in Menu"
+    				+ " The Exception Message and Stack Trace is as Follows. Pls Check");
+    		System.out.println(e.getMessage());
+    		e.printStackTrace();
+    		
+    	}
     }
 
     private void updateStudentMarks() {
