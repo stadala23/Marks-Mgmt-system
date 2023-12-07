@@ -13,6 +13,7 @@ public class Menu {
     }
 
     public void displayMenu() {
+    	try {
         while (true) {
             System.out.println("1. Add Undergraduate Student");
             System.out.println("2. Add Graduate Student");
@@ -60,6 +61,13 @@ public class Menu {
                     System.out.println("Invalid choice. Please try again.");
             }
         }
+    }
+    catch(Exception e) {
+    	System.out.println("There seems to be Some Exception Occurred in the code to displayMenu"
+				+ " The Exception Message and Stack Trace is as Follows. Pls Check");
+		System.out.println(e.getMessage());
+		e.printStackTrace();
+    }
     }
 
     private void addUndergraduateStudent() {
