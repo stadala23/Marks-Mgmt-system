@@ -205,11 +205,22 @@ public class Menu {
     }
 
     private void displayBestStudentInDatabaseManagementSystem() {
+    	try {
+    		
+    	
         Student bestStudent = studentManager.getBestStudentInDatabaseManagementSystem();
         if (bestStudent != null) {
             System.out.println("Best Student in Database Management System: " + bestStudent);
         } else {
             System.out.println("No student data available.");
         }
+    }
+    	catch(Exception e) {
+    		System.out.println("There seems to be Some Exception Occurred in the code to displayBestStudentInDatabaseManagementSystem in Menu"
+    				+ " The Exception Message and Stack Trace is as Follows. Pls Check");
+    		System.out.println(e.getMessage());
+    		e.printStackTrace();
+    		
+    	}
     }
 }
