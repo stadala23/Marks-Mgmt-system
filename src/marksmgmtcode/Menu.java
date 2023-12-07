@@ -186,12 +186,22 @@ public class Menu {
     }
 
     private void displayBestStudentInProgrammingFundamentals() {
+    	try {
+    		
+    	
         Student bestStudent = studentManager.getBestStudentInProgrammingFundamentals();
         if (bestStudent != null) {
             System.out.println("Best Student in Programming Fundamentals: " + bestStudent);
         } else {
             System.out.println("No student data available.");
         }
+    	}
+    	catch(Exception e) {
+    		System.out.println("There seems to be Some Exception Occurred in the code to displayBestStudentInProgrammingFundamentals in Menu"
+    				+ " The Exception Message and Stack Trace is as Follows. Pls Check");
+    		System.out.println(e.getMessage());
+    		e.printStackTrace();
+    	}
     }
 
     private void displayBestStudentInDatabaseManagementSystem() {
