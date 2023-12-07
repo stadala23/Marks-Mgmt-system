@@ -1,18 +1,20 @@
-## Getting Started
+# Overview
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+The Marks Management System is a Java-based application designed for managing student records. It allows for adding, updating, and deleting student records, as well as calculating and displaying the best students in various subjects.
 
-## Folder Structure
+# Features
 
-The workspace contains two folders by default, where:
+Add, update, and delete student records.
+Calculate and display the best students in courses like Programming Fundamentals and Database Management Systems.
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+# Classes Description
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+App: The main class that runs the application.
+Student: Base class representing a student with common attributes.
+UndergraduateStudent: Inherits from Student, represents an undergraduate student.
+GraduateStudent: Inherits from Student, represents a graduate student.
+Menu: Handles the user interface and menu options.
+StudentManager: Manages the list of students and provides functionalities like add, update, delete, and find.
 
-## Dependency Management
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).

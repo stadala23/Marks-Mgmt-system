@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"marksmgmtcode","l":"App"},{"p":"marksmgmtcode","l":"GraduateStudent"},{"p":"marksmgmtcode","l":"Menu"},{"p":"marksmgmtcode","l":"Student"},{"p":"marksmgmtcode","l":"StudentManager"},{"p":"marksmgmtcode","l":"UndergraduateStudent"}];updateSearchResults();
