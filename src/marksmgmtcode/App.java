@@ -6,8 +6,8 @@ public class App {
 		try {
 			
 		
-		Menu menu = new Menu();
-		menu.displayMenu();
+		Menu marksManagementmenu = new Menu();
+		marksManagementmenu.displayMenu();
 		}
 		catch(Exception e) {
 			System.out.println("There seems to be Some Exception Occurred in the code."
