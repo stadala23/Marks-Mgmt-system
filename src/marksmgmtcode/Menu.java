@@ -131,12 +131,12 @@ public class Menu {
 		try {
 
 			System.out.print("Enter Student ID: ");
-			String id = scanner.nextLine();
+			String studentId = scanner.nextLine();
 			System.out.print("Enter Programming Fundamentals Marks: ");
-			double pfMarks = scanner.nextDouble();
+			double progFundamentals_Marks = scanner.nextDouble();
 			System.out.print("Enter Database Management System Marks: ");
-			double dbmsMarks = scanner.nextDouble();
-			studentManager.updateStudentMarks(id, pfMarks, dbmsMarks);
+			double dbms_Marks = scanner.nextDouble();
+			studentManager.updateStudentMarks(studentId, progFundamentals_Marks, dbms_Marks);
 			System.out.println("Student marks updated successfully.");
 		} catch (Exception e) {
 			System.out.println("There seems to be Some Exception Occurred in the code to updateStudentMarks in Menu"
@@ -150,8 +150,8 @@ public class Menu {
 	private void deleteStudent() {
 		try {
 			System.out.print("Enter Student ID: ");
-			String id = scanner.nextLine();
-			studentManager.deleteStudent(id);
+			String studentId = scanner.nextLine();
+			studentManager.deleteStudent(studentId);
 			System.out.println("Student deleted successfully.");
 		} catch (Exception e) {
 			System.out.println("There seems to be Some Exception Occurred in the code to deleteStudent in Menu"
@@ -165,8 +165,8 @@ public class Menu {
 	private void displayStudents() {
 		try {
 
-			List<Student> students = studentManager.getStudents();
-			for (Student student : students) {
+			List<Student> allStudents = studentManager.getStudents();
+			for (Student student : allStudents) {
 				System.out.println(student);
 			}
 		} catch (Exception e) {
