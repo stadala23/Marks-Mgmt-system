@@ -73,13 +73,13 @@ public class Menu {
     private void addUndergraduateStudent() {
     	try {
         System.out.print("Enter Student ID: ");
-        String id = scanner.nextLine();
+        String studentId = scanner.nextLine();
         System.out.print("Enter Student Name: ");
-        String name = scanner.nextLine();
-        System.out.print("Enter Major: ");
-        String major = scanner.nextLine();
-        UndergraduateStudent student = new UndergraduateStudent(id, name, major);
-        studentManager.addStudent(student);
+        String studentName = scanner.nextLine();
+        System.out.print("Enter Field Of Study: ");
+        String fieldOfStudy = scanner.nextLine();
+        UndergraduateStudent underGradStudent = new UndergraduateStudent(studentId, studentName, fieldOfStudy);
+        studentManager.addStudent(underGradStudent);
         System.out.println("Undergraduate Student added successfully.");
     	}
     	catch(Exception e) {
