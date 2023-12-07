@@ -3,16 +3,30 @@ package marksmgmtcode;
 import java.util.List;
 import java.util.Scanner;
 
+/**
+ * Menu class for the Marks Management application. This class provides the user
+ * interface for managing student records, offering functionalities like adding,
+ * updating, and deleting students.
+ */
 public class Menu {
 	private StudentManager studentManager;
 	private Scanner scanner;
 
+	/**
+	 * Constructor for Menu class. Initializes the StudentManager and Scanner
+	 * instances.
+	 */
 	public Menu() {
 		studentManager = new StudentManager();
 		scanner = new Scanner(System.in);
 	}
 
+	/**
+	 * Displays the main menu with various options and handles user input. The menu
+	 * offers functionalities like adding, updating, and displaying student records.
+	 */
 	public void displayMenu() {
+		// Menu implementation with try-catch for exception handling
 		try {
 			while (true) {
 				System.out.println("1. Add Undergraduate Student");
@@ -69,7 +83,12 @@ public class Menu {
 		}
 	}
 
+	/**
+	 * Adds a new undergraduate student record. This method prompts the user for
+	 * student details and adds the record to the system.
+	 */
 	private void addUndergraduateStudent() {
+		// Implementation for adding an undergraduate student
 		try {
 			System.out.print("Enter Student ID: ");
 			String studentId = scanner.nextLine();
@@ -90,7 +109,12 @@ public class Menu {
 		}
 	}
 
+	/**
+	 * Adds a new graduate student record. This method prompts the user for student
+	 * details, including their area of study, and adds the record.
+	 */
 	private void addGraduateStudent() {
+		// Implementation for adding an graduate student
 		try {
 			System.out.print("Enter Student ID: ");
 			String studentId = scanner.nextLine();
@@ -110,7 +134,12 @@ public class Menu {
 		}
 	}
 
+	/**
+	 * Updates the name of an existing student. This method asks for the student ID
+	 * and the new name, and updates the record accordingly.
+	 */
 	private void updateStudentName() {
+		// Implementation for updating a student's name
 		try {
 			System.out.print("Enter Student ID: ");
 			String studentId = scanner.nextLine();
@@ -127,7 +156,12 @@ public class Menu {
 		}
 	}
 
+	/**
+	 * Updates the marks of an existing student. This method allows modification of
+	 * a student's marks in different subjects.
+	 */
 	private void updateStudentMarks() {
+		// Implementation for updating a student's marks
 		try {
 
 			System.out.print("Enter Student ID: ");
@@ -147,7 +181,12 @@ public class Menu {
 		}
 	}
 
+	/**
+	 * Deletes a student record from the system. This method requires the student ID
+	 * for deletion.
+	 */
 	private void deleteStudent() {
+		// Implementation for deleting a student record
 		try {
 			System.out.print("Enter Student ID: ");
 			String studentId = scanner.nextLine();
@@ -162,7 +201,11 @@ public class Menu {
 		}
 	}
 
+	/**
+	 * Displays all student records from the system.
+	 */
 	private void displayStudents() {
+		// Implementation for Displaying all student records
 		try {
 
 			List<Student> allStudents = studentManager.getStudents();
@@ -177,7 +220,12 @@ public class Menu {
 		}
 	}
 
+	/**
+	 * Displays the Best student of Programming Fundamentals Class from the system.
+	 */
 	private void displayBestStudentInProgrammingFundamentals() {
+
+		// Implementation for Displaying Best student of Programming Fundamentals Class
 		try {
 
 			Student topper_ProgFundamentals = studentManager.getBestStudentInProgrammingFundamentals();
@@ -195,7 +243,14 @@ public class Menu {
 		}
 	}
 
+	/**
+	 * Displays the Best student of Database Management System Class from the
+	 * system.
+	 */
 	private void displayBestStudentInDatabaseManagementSystem() {
+
+		// Implementation for Displaying Best student of Database Management System
+		// Class
 		try {
 
 			Student topper_Dbms = studentManager.getBestStudentInDatabaseManagementSystem();
