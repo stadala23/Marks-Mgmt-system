@@ -180,9 +180,9 @@ public class Menu {
 	private void displayBestStudentInProgrammingFundamentals() {
 		try {
 
-			Student bestStudent = studentManager.getBestStudentInProgrammingFundamentals();
-			if (bestStudent != null) {
-				System.out.println("Best Student in Programming Fundamentals: " + bestStudent);
+			Student topper_ProgFundamentals = studentManager.getBestStudentInProgrammingFundamentals();
+			if (topper_ProgFundamentals != null) {
+				System.out.println("Best Student in Programming Fundamentals: " + topper_ProgFundamentals);
 			} else {
 				System.out.println("No student data available.");
 			}
@@ -198,9 +198,9 @@ public class Menu {
 	private void displayBestStudentInDatabaseManagementSystem() {
 		try {
 
-			Student bestStudent = studentManager.getBestStudentInDatabaseManagementSystem();
-			if (bestStudent != null) {
-				System.out.println("Best Student in Database Management System: " + bestStudent);
+			Student topper_Dbms = studentManager.getBestStudentInDatabaseManagementSystem();
+			if (topper_Dbms != null) {
+				System.out.println("Best Student in Database Management System: " + topper_Dbms);
 			} else {
 				System.out.println("No student data available.");
 			}
