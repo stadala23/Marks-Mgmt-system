@@ -4,7 +4,7 @@ package marksmgmtcode;
  * Represents a student in the Marks Management application. This class holds
  * basic student information and their marks in specific courses.
  */
-public class Student {
+ class Student {
 	protected String studentId;
 	protected String studentName;
 	private double progFundamentals_Marks;
