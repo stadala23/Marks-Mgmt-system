@@ -8,7 +8,7 @@ import java.util.Scanner;
  * interface for managing student records, offering functionalities like adding,
  * updating, and deleting students.
  */
-public class Menu {
+ class Menu {
 	private StudentManager studentManager;
 	private Scanner scanner;
 

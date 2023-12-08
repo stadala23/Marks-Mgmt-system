@@ -4,7 +4,7 @@ package marksmgmtcode;
  * Represents a graduate student, extending the general Student class.
  * This class adds specific properties and methods relevant to graduate students.
  */
-public class GraduateStudent extends Student {
+ class GraduateStudent extends Student {
     private String areaOfStudy;
 
     /**

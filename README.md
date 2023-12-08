@@ -17,4 +17,10 @@ GraduateStudent: Inherits from Student, represents a graduate student.
 Menu: Handles the user interface and menu options.
 StudentManager: Manages the list of students and provides functionalities like add, update, delete, and find.
 
+Contact -
+
+Srihari Karthik Tadala (stadala@pdx.edu)
+Mahesh Vankayalapati (maheshv@pdx.edu)
+Yeshwanth Kumar Peravali (peravali@pdx.edu)
+ 
 
