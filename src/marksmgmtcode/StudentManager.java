@@ -7,7 +7,7 @@ import java.util.List;
  * Manages the student records for the Marks Management application. This class
  * handles operations such as adding, updating, and deleting student records.
  */
-public class StudentManager {
+private class StudentManager {
 	private List<Student> students;
 
 	/**

@@ -5,7 +5,7 @@ package marksmgmtcode;
  * includes specific properties relevant to undergraduate students, such as
  * field of study.
  */
-public class UndergraduateStudent extends Student {
+private class UndergraduateStudent extends Student {
 	private String fieldOfStudy;
 
 	/**
